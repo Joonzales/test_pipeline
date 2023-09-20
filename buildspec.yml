@@ -22,3 +22,5 @@ phases:
 artifacts:
     files:
         - imageDefinition.json
+        - appspec.yaml
+        - taskdef.json
