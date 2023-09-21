@@ -18,7 +18,8 @@ phases:
     post_build:
         commands:
             - docker push ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER}
-            - printf '[{"name":"httpd", "imageUri":"%s"}]' ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER} > imageDefinition.json
+            # - printf '[{"name":"httpd", "imageUri":"%s"}]' ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER} > imageDefinition.json\
+            - printf '{"ImageURI":"%s"}' ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER} > imageDetail.json
 artifacts:
     files:
         - imageDefinition.json
