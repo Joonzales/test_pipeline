@@ -2,7 +2,7 @@ version: 0.2
 env:
     variables:
         REGION: ap-northeast-2
-        ECR_REPO: httpd
+        ECR_REPO: dev
 phases:
     install:
         runtime-versions:
