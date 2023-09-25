@@ -19,7 +19,7 @@ phases:
         commands:
             - docker push ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER}
             # - printf '{"ImageURI":"%s"}' ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER} > imageDetail.json
-            - printf '[{"name":"dev","ImageUri":"%s"}]' ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER} > imageDefinitions.json
+            - printf '[{"name":"dev","imageUri":"%s"}]' ${ECR_REPO_URI}:v${CODEBUILD_BUILD_NUMBER} > imageDefinitions.json
 artifacts:
     files:
         - imageDefinitions.json
